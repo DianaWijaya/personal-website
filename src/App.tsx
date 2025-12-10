@@ -1,10 +1,11 @@
-import Navbar from "@/scenes/navbar";
-import Home from "@/scenes/home";
-import Projects from "@/scenes/projects";
-import Contact from "@/scenes/contact";
-import Footer from "@/scenes/footer";
+import Navbar from "@/sections/navbar";
+import Home from "@/sections/home";
+import Projects from "@/sections/projects";
+import Contact from "@/sections/contact";
+import Footer from "@/sections/footer";
+import Experience from "@/sections/experience";
 import { useEffect, useState } from "react";
-import { SelectedPage } from "@/shared/types";
+import { SelectedPage } from "@/reusables/types";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -32,7 +33,11 @@ function App() {
         setSelectedPage={setSelectedPage}
       />
       <Home setSelectedPage={setSelectedPage} />
+      {/* <AboutMe setSelectedPage={setSelectedPage} /> */}
       <Projects setSelectedPage={setSelectedPage} />
+      {/* <Skills setSelectedPage={setSelectedPage} /> */}
+      <Experience setSelectedPage={setSelectedPage} />
+      {/* <Education setSelectedPage={setSelectedPage} /> */}
       <Contact setSelectedPage={setSelectedPage} />
       <Footer />
     </div>
