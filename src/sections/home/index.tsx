@@ -1,8 +1,6 @@
-import useMediaQuery from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/reusables/types";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
-import SelfPicture from "@/assets/SelfPicture.png";
 import GithubIcon from "@/assets/GithubIcon.png";
 import LinkedinIcon from "@/assets/LinkedinIcon.png";
 
@@ -11,83 +9,137 @@ type Props = {
 };
 
 const Home = ({ setSelectedPage }: Props) => {
-  const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
-
   return (
-    <section id="home" className="gap-16 bg-cream-20 text-brown-700 py-10 md:h-full md:pb-0">
-      {/* MAIN HEADER */}
+    <section 
+      id="home" 
+      className="min-h-screen relative flex items-center justify-center px-6 overflow-hidden pt-20"
+    >
+      {/* ANIMATED BACKGROUND */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50">
+        {/* Floating circles */}
+        <motion.div
+          className="absolute top-20 left-20 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+          animate={{
+            x: [0, 100, 0],
+            y: [0, -100, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute top-40 right-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+          animate={{
+            x: [0, -100, 0],
+            y: [0, 100, 0],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute -bottom-20 left-1/2 w-80 h-80 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+          animate={{
+            x: [0, -50, 0],
+            y: [0, -50, 0],
+          }}
+          transition={{
+            duration: 22,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+
+        <motion.div
+          className="absolute -bottom-10 left-10 w-60 h-60 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+          animate={{
+            x: [0, 50, 0],
+            y: [0, 50, 0],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </div>
+
+      {/* CONTENT */}
       <motion.div
-        className="mx-auto w-5/6 flex flex-col-reverse md:flex-row items-center justify-between md:h-5/6"
+        className="max-w-3xl w-full text-center relative z-10"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7 }}
+        variants={{
+          hidden: { opacity: 0, y: 30 },
+          visible: { opacity: 1, y: 0 },
+        }}
       >
-        {/* LEFT CONTENT */}
-        <div className="z-10 mt-10 md:basis-3/5 text-center md:text-left">
-          {/* HEADINGS */}
-          <motion.div
-            className="md:-mt-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
-            }}
+        {/* MAIN CONTENT */}
+        <div className="space-y-6">
+          <motion.h1 
+            className="text-7xl md:text-8xl font-bold text-gray-900 tracking-tight"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <p className="text-xl text-brown-700 uppercase tracking-wider">
-              Hey, I'm Diana
-            </p>
-            <h1 className="text-6xl font-bold text-brown-500 mt-2">
-              I'M A <span className="text-brown-500">DEVELOPER</span>
-            </h1>
-            <p className="mt-4 text-base text-black">
-              Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description
-            </p>
-          </motion.div>
+            HEY, I'M DIANA
+          </motion.h1>
+          
+          <motion.p 
+            className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+            A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to the success of the overall product
+          </motion.p>
 
-          {/* ACTIONS */}
+          {/* CALL TO ACTION */}
           <motion.div
-            className="mt-8 flex flex-col md:flex-row items-center gap-6"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
-            }}
+            className="pt-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
           >
-            {/* GET IN TOUCH BUTTON */}
             <AnchorLink
-              href="#contact"
-              className="bg-brown-400 text-cream-50 px-6 py-3 rounded-full text-lg hover:bg-brown-600 transition"
+              href="#projects"
+              className="inline-block bg-indigo-600 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              GET IN TOUCH →
+              PROJECTS
             </AnchorLink>
-
-            {/* SOCIAL MEDIA ICONS */}
-            <div className="flex gap-4">
-              <a
-                href="https://linkedin.com/in/dianawijaya39"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={LinkedinIcon} alt="LinkedIn" className="w-12 h-12 rounded-full" />
-              </a>
-              <a
-                href="https://github.com/DianaWijaya"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={GithubIcon} alt="GitHub" className="w-12 h-12 rounded-full" />
-              </a>
-            </div>
           </motion.div>
-        </div>
 
-        {/* RIGHT IMAGE */}
-        <div className="flex basis-3/5 justify-center md:justify-end md:ml-40 md:mt-16">
-          <img alt="self-picture" src={SelfPicture} />
+          {/* SOCIAL LINKS */}
+          <motion.div 
+            className="flex justify-center gap-6 pt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+          >
+            <a
+              href="https://linkedin.com/in/dianawijaya39"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full hover:scale-110 transition-transform duration-300"
+            >
+              <img src={LinkedinIcon} alt="LinkedIn" className="w-full h-full rounded-full" />
+            </a>
+            <a
+              href="https://github.com/DianaWijaya"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full hover:scale-110 transition-transform duration-300"
+            >
+              <img src={GithubIcon} alt="GitHub" className="w-full h-full rounded-full" />
+            </a>
+          </motion.div>
         </div>
       </motion.div>
     </section>
