@@ -15,7 +15,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-  const navbarBackground = isTopOfPage ? "bg-transparent" : "bg-cream-10 shadow-md";
+  const navbarBackground = isTopOfPage ? "bg-transparent" : "bg-white/70 backdrop-blur-md shadow-sm";
 
   return (
     <nav>
@@ -24,7 +24,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           <div className={`${flexBetween} w-full gap-16`}>
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>
-                <div className={`${flexBetween} gap-8 text-sm text-brown-700`}>
+                <div className={`${flexBetween} gap-8 text-sm`}>
                   <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                   <Link page="About Me" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                   <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
@@ -42,7 +42,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         </div>
             ) : (
               <button
-                className="rounded-full bg-brown-400 p-2 hover:bg-brown-500 transition-all"
+                // className="rounded-full bg-brown-400 p-2 hover:bg-brown-500 transition-all"
+                className="rounded-full bg-gray-800/70 p-2 hover:bg-gray-800"
+
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
                 <Bars3Icon className="h-6 w-6 text-cream-10" />
@@ -63,7 +65,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           </div>
 
           {/* MENU ITEMS */}
-          <div className="ml-[20%] flex flex-col gap-6 text-xl text-brown-700">
+           <div className="ml-[20%] flex flex-col gap-6 text-xl text-gray-800">
             <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
             <Link page="About Me" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
             <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />

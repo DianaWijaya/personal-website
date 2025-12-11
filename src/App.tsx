@@ -1,5 +1,6 @@
 import Navbar from "@/sections/navbar";
 import Home from "@/sections/home";
+import AboutMe from "@/sections/aboutme";
 import Projects from "@/sections/projects";
 import Contact from "@/sections/contact";
 import Footer from "@/sections/footer";
@@ -33,7 +34,7 @@ function App() {
         setSelectedPage={setSelectedPage}
       />
       <Home setSelectedPage={setSelectedPage} />
-      {/* <AboutMe setSelectedPage={setSelectedPage} /> */}
+      <AboutMe setSelectedPage={setSelectedPage} />
       <Projects setSelectedPage={setSelectedPage} />
       {/* <Skills setSelectedPage={setSelectedPage} /> */}
       <Experience setSelectedPage={setSelectedPage} />

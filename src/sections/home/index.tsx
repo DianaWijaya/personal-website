@@ -84,7 +84,7 @@ const Home = ({ setSelectedPage }: Props) => {
         {/* MAIN CONTENT */}
         <div className="space-y-6">
           <motion.h1 
-            className="text-7xl md:text-8xl font-bold text-gray-900 tracking-tight"
+            className="text-7xl md:text-8xl font-bold text-text-dark tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -98,7 +98,7 @@ const Home = ({ setSelectedPage }: Props) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to the success of the overall product
+            A passionate Computer Science graduate turning creative ideas into reality by building scalable solutions with modern technologies and clean code.
           </motion.p>
 
           {/* CALL TO ACTION */}
@@ -110,9 +110,9 @@ const Home = ({ setSelectedPage }: Props) => {
           >
             <AnchorLink
               href="#projects"
-              className="inline-block bg-indigo-600 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block bg-purple-main text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-purple-light transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              PROJECTS
+              MORE ABOUT ME
             </AnchorLink>
           </motion.div>
 

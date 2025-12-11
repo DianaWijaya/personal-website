@@ -4,25 +4,36 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "cream-10": "#FAF7F2",   // Very very very light cream
-        "cream-20": "#F0EBE3",   // Very very light cream
-        "cream-50": "#FAF3E0",   // Very very light cream
-        "cream-100": "#F5E6C8",  // Light cream
-        "cream-200": "#ECD8AE",  // Warm cream
-        "brown-300": "#C4A484",  // Light brown
-        "brown-400": "#A97C50",  // Medium brown
-        "brown-500": "#8B5A2B",  // Rich brown
-        "brown-600": "#6D3D14",  // Dark brown
-        "brown-700": "#4E2A0E",  // Very dark brown
+        // MAIN BACKGROUND PALETTE
+        "bg-white": "#ffffff",
+        "bg-light": "#f8fafc",   // near-white grey (similar to gray-50)
+        "bg-light-2": "#f1f5f9", // light soft grey (similar to gray-100)
+
+        // TEXT COLORS
+        "text-dark": "#1e293b",  // slate-800
+        "text-medium": "#475569", // slate-600
+        "text-light": "#94a3b8",  // slate-400
+
+        // ACCENT — PURPLE
+        "purple-main": "#6d28d9", // deep purple (indigo-700)
+        "purple-light": "#8b5cf6", // brighter purple (violet-500)
+        "purple-soft": "#ede9fe",  // soft background purple
+
+        // GLASS UI COLORS
+        "glass-white": "rgba(255,255,255,0.7)",
+        "glass-dark": "rgba(0,0,0,0.1)",
       },
-      backgroundImage: (theme) => ({
-        "gradient-browncream":
-          "linear-gradient(90deg, #F5E6C8 0%, #8B5A2B 100%)",
-      }),
+
+      backgroundImage: {
+        "gradient-purple":
+          "linear-gradient(135deg, #ede9fe 0%, #c4b5fd 50%, #a78bfa 100%)",
+      },
+
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
+
       content: {
         evolvetext: "url('./assets/EvolveText.png')",
         abstractwaves: "url('./assets/AbstractWaves.png')",
@@ -30,6 +41,7 @@ module.exports = {
         circles: "url('./assets/Circles.png')",
       },
     },
+
     screens: {
       xs: "480px",
       sm: "768px",
