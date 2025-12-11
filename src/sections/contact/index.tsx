@@ -1,15 +1,14 @@
 import { useForm } from "react-hook-form";
 import { SelectedPage } from "@/reusables/types";
 import { motion } from "framer-motion";
-import HText from "@/reusables/HText";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
 const Contact = ({ setSelectedPage }: Props) => {
-  const inputStyles = `mb-5 w-full rounded-lg bg-cream-10 text-brown-700
-  px-5 py-3 placeholder-brown-500 text-sm`;
+  const inputStyles = `mb-5 w-full rounded-xl bg-white border-2 border-purple-soft/50 text-text-dark
+  px-5 py-3 placeholder-text-light focus:border-purple-main focus:outline-none transition-colors duration-300`;
 
   const {
     register,
@@ -25,100 +24,121 @@ const Contact = ({ setSelectedPage }: Props) => {
   };
 
   return (
-    <section id="contact" className="mx-auto flex w-5/6 flex-col items-center pt-24 pb-32">
-      <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}>
+    <section 
+      id="contact" 
+      className="min-h-screen bg-gradient-to-b from-bg-white to-bg-light py-20 px-6"
+    >
+      <motion.div 
+        className="max-w-4xl mx-auto"
+        onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
+      >
         {/* HEADER */}
         <motion.div
-          className="text-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: -50 },
-            visible: { opacity: 1, y: 0 },
-          }}
+          className="mb-16"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
         >
-          <HText>Contact Me</HText>
-          <p className="mt-2 text-brown-100">
-            Please contact me directly at dianawijaya1234@gmail.com or through this form.
-          </p>
+          <div className="relative mb-8">
+            <div className="text-[120px] md:text-[200px] font-bold text-purple-soft/30 leading-none text-center select-none">
+              TALK
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <h2 className="text-5xl md:text-6xl font-bold text-text-dark">
+                GET IN TOUCH
+              </h2>
+            </div>
+          </div>
         </motion.div>
 
         {/* FORM */}
         <motion.div
-          className="mt-10 flex justify-center w-full"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
+          className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border-2 border-purple-soft/50"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
           <form
-            className="w-full max-w-md mx-auto"
             target="_blank"
             onSubmit={onSubmit}
             action="https://formsubmit.co/99c81f49a1a534e947f7693183a12389"
             method="POST"
           >
-            <input
-              className={inputStyles}
-              type="text"
-              placeholder="Your name"
-              {...register("name", {
-                required: true,
-                maxLength: 100,
-              })}
-            />
-            {errors.name && (
-              <p className="mt-1 text-brown-700 text-sm">
-                {errors.name.type === "required" && "This field is required."}
-                {errors.name.type === "maxLength" && "Max length is 100 char."}
-              </p>
-            )}
+            {/* NAME */}
+            <div className="mb-6">
+              <label className="block text-text-dark font-semibold mb-2 text-sm">
+                Your Name
+              </label>
+              <input
+                className={inputStyles}
+                type="text"
+                placeholder="John Doe"
+                {...register("name", {
+                  required: true,
+                  maxLength: 100,
+                })}
+              />
+              {errors.name && (
+                <p className="text-red-500 text-sm -mt-3">
+                  {errors.name.type === "required" && "This field is required."}
+                  {errors.name.type === "maxLength" && "Max length is 100 characters."}
+                </p>
+              )}
+            </div>
 
-            <input
-              className={inputStyles}
-              type="text"
-              placeholder="Your email"
-              {...register("email", {
-                required: true,
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              })}
-            />
-            {errors.email && (
-              <p className="mt-1 text-brown-700 text-sm">
-                {errors.email.type === "required" && "This field is required."}
-                {errors.email.type === "pattern" && "Invalid email address."}
-              </p>
-            )}
+            {/* EMAIL */}
+            <div className="mb-6">
+              <label className="block text-text-dark font-semibold mb-2 text-sm">
+                Your Email
+              </label>
+              <input
+                className={inputStyles}
+                type="text"
+                placeholder="john@example.com"
+                {...register("email", {
+                  required: true,
+                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                })}
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm -mt-3">
+                  {errors.email.type === "required" && "This field is required."}
+                  {errors.email.type === "pattern" && "Invalid email address."}
+                </p>
+              )}
+            </div>
 
-            <textarea
-              className={inputStyles}
-              placeholder="Message"
-              rows={4}
-              {...register("message", {
-                required: true,
-                maxLength: 2000,
-              })}
-            />
-            {errors.message && (
-              <p className="mt-1 text-brown-700 text-sm">
-                {errors.message.type === "required" && "This field is required."}
-                {errors.message.type === "maxLength" && "Max length is 2000 char."}
-              </p>
-            )}
+            {/* MESSAGE */}
+            <div className="mb-6">
+              <label className="block text-text-dark font-semibold mb-2 text-sm">
+                Message
+              </label>
+              <textarea
+                className={inputStyles}
+                placeholder="Tell me about your project..."
+                rows={6}
+                {...register("message", {
+                  required: true,
+                  maxLength: 2000,
+                })}
+              />
+              {errors.message && (
+                <p className="text-red-500 text-sm -mt-3">
+                  {errors.message.type === "required" && "This field is required."}
+                  {errors.message.type === "maxLength" && "Max length is 2000 characters."}
+                </p>
+              )}
+            </div>
 
-            {/* SUBMIT BOTTON */}
-            <div className="mt-3 flex justify-center">
+            {/* SUBMIT BUTTON */}
+            <div className="flex justify-center">
               <button
                 type="submit"
-                className="px-6 py-2 rounded-lg bg-cream-100 text-brown-700 transition duration-500 hover:bg-brown-300"
+                className="bg-purple-main text-white px-12 py-4 rounded-xl font-semibold text-lg hover:bg-purple-light transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                SUBMIT
+                Send Message
               </button>
             </div>
           </form>

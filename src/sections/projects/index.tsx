@@ -109,7 +109,7 @@ const Projects = ({ setSelectedPage }: Props) => {
             </div>
             <div className="absolute inset-0 flex items-center justify-center">
               <h2 className="text-5xl md:text-6xl font-bold text-text-dark">
-                SELECTED PROJECTS
+                PROJECTS
               </h2>
             </div>
           </div>
