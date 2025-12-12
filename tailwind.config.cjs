@@ -40,6 +40,12 @@ module.exports = {
         sparkles: "url('./assets/Sparkles.png')",
         circles: "url('./assets/Circles.png')",
       },
+
+      extend: {
+        perspective: {
+          1000: "1000px",
+        },
+      }
     },
 
     screens: {

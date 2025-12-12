@@ -4,6 +4,8 @@ import AboutMe from "@/sections/aboutme";
 import Projects from "@/sections/projects";
 import Contact from "@/sections/contact";
 import Footer from "@/sections/footer";
+import Skills from "@/sections/skills";
+import Education from "@/sections/education";
 import Experience from "@/sections/experience";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "@/reusables/types";
@@ -36,9 +38,9 @@ function App() {
       <Home setSelectedPage={setSelectedPage} />
       <AboutMe setSelectedPage={setSelectedPage} />
       <Projects setSelectedPage={setSelectedPage} />
-      {/* <Skills setSelectedPage={setSelectedPage} /> */}
+      <Skills setSelectedPage={setSelectedPage} />
       <Experience setSelectedPage={setSelectedPage} />
-      {/* <Education setSelectedPage={setSelectedPage} /> */}
+      <Education setSelectedPage={setSelectedPage} />
       <Contact setSelectedPage={setSelectedPage} />
       <Footer />
     </div>
