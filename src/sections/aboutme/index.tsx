@@ -16,7 +16,7 @@ const AboutMe = ({ setSelectedPage }: Props) => {
         className="max-w-5xl mx-auto"
         onViewportEnter={() => setSelectedPage(SelectedPage.AboutMe)}
       >
-        {/* CREATIVE HEADER - MATCHING PROJECTS STYLE */}
+        {/* HEADER */}
         <motion.div
           className="mb-10"
           initial={{ opacity: 0 }}
@@ -41,7 +41,7 @@ const AboutMe = ({ setSelectedPage }: Props) => {
 
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* MAIN CONTENT - Takes 2 columns */}
+          {/* ABOUT ME */}
           <motion.div
             className="lg:col-span-2 space-y-6"
             initial={{ opacity: 0, y: 30 }}
@@ -67,7 +67,7 @@ const AboutMe = ({ setSelectedPage }: Props) => {
             </div>
           </motion.div>
 
-          {/* CONNECT WITH ME - Takes 1 column */}
+          {/* CONNECT */}
           <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 30 }}

@@ -99,8 +99,8 @@ const Experience = ({ setSelectedPage }: Props) => {
           </p> */}
         </motion.div>
 
-        {/* HORIZONTAL TIMELINE */}
         <div className="relative">
+
           {/* Progress bar */}
           <div className="absolute top-0 left-0 right-0 h-1 overflow-hidden rounded-full bg-purple-soft/50">
             <motion.div
@@ -127,38 +127,37 @@ const Experience = ({ setSelectedPage }: Props) => {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: index * 0.2, duration: 0.6 }}
               >
-                {/* Timeline dot and line */}
+                
                 <div className="relative">
-                  {/* Dot */}
                   <div className="absolute -top-8 left-1/2 z-10 h-4 w-4 -translate-x-1/2 transform rounded-full border-4 border-white bg-purple-main shadow-lg" />
-
-                  {/* Vertical line connecting to card */}
                   <div className="absolute -top-8 left-1/2 h-8 w-0.5 -translate-x-1/2 transform bg-purple-main/30" />
                 </div>
 
-                {/* Card */}
+                {/* Card Element */}
                 <div className="h-full rounded-2xl border-2 border-purple-soft/50 bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-2xl">
-                  {/* Period badge */}
+                  {/* PERIOD */}
                   <div className="mb-4 inline-block rounded-full bg-purple-soft px-4 py-1">
                     <span className="text-sm font-semibold text-purple-main">
                       {exp.period}
                     </span>
                   </div>
 
-                  {/* Company and role */}
+                  {/* ROLE */}
                   <h3 className="mb-2 text-2xl font-bold text-text-dark">
                     {exp.role}
                   </h3>
+
+                  {/* COMPANY */}
                   <p className="mb-4 font-semibold text-purple-main">
                     {exp.company}
                   </p>
 
-                  {/* Description */}
+                  {/* DESCRIPTION */}
                   <p className="mb-4 text-sm leading-relaxed text-text-medium">
                     {exp.description}
                   </p>
 
-                  {/* Technologies */}
+                  {/* TECHNOLOGIES */}
                   {exp.technologies?.length > 0 && (
                     <div>
                       <h4 className="mb-2 text-sm font-semibold text-text-dark">

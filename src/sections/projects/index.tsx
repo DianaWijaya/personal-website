@@ -137,9 +137,8 @@ const Projects = ({ setSelectedPage }: Props) => {
           </p>
         </motion.div>
 
-        {/* BENTO GRID */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
-          {/* Project 1 - Large Featured */}
+          {/* Project 1 - Large */}
           <motion.div
             className="md:col-span-8 md:row-span-2 group cursor-pointer"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -286,7 +285,6 @@ const Projects = ({ setSelectedPage }: Props) => {
         </motion.div>
       </motion.div>
 
-      {/* MODAL */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div

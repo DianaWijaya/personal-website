@@ -16,6 +16,7 @@ const Home = ({ setSelectedPage }: Props) => {
     >
       {/* ANIMATED BACKGROUND */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50">
+
         {/* Floating circles */}
         <motion.div
           className="absolute top-20 left-20 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
@@ -68,7 +69,6 @@ const Home = ({ setSelectedPage }: Props) => {
         />
       </div>
 
-      {/* CONTENT */}
       <motion.div
         className="max-w-3xl w-full text-center relative z-10"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
@@ -81,7 +81,7 @@ const Home = ({ setSelectedPage }: Props) => {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        {/* MAIN CONTENT */}
+        
         <div className="space-y-6">
           <motion.h1 
             className="text-7xl md:text-8xl font-bold text-text-dark tracking-tight"
@@ -101,7 +101,6 @@ const Home = ({ setSelectedPage }: Props) => {
             A passionate Computer Science graduate turning creative ideas into reality by building scalable solutions with modern technologies and clean code.
           </motion.p>
 
-          {/* CALL TO ACTION */}
           <motion.div
             className="pt-8"
             initial={{ opacity: 0, y: 20 }}

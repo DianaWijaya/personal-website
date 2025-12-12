@@ -42,9 +42,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         </div>
             ) : (
               <button
-                // className="rounded-full bg-brown-400 p-2 hover:bg-brown-500 transition-all"
                 className="rounded-full bg-gray-800/70 p-2 hover:bg-gray-800"
-
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
                 <Bars3Icon className="h-6 w-6 text-cream-10" />

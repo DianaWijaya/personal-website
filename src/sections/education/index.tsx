@@ -68,7 +68,6 @@ const Education = ({ setSelectedPage }: Props) => {
           </div>
         </motion.div>
 
-        {/* TWO COLUMN LAYOUT */}
         <div className="space-y-16">
           {education.map((edu, index) => (
             <motion.div
@@ -79,7 +78,7 @@ const Education = ({ setSelectedPage }: Props) => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
             >
-              {/* LEFT SIDE - Institution */}
+              {/* EDUCATION TITLE */}
               <div className="relative">
                 <div className="sticky top-24">
                   <h3 className="text-3xl font-bold text-gray-900 mb-3">
@@ -88,15 +87,14 @@ const Education = ({ setSelectedPage }: Props) => {
                   <p className="text-lg text-gray-600 mb-2">{edu.period}</p>
                   <p className="text-md text-gray-500">{edu.location}</p>
 
-                  {/* Connecting Line */}
+                  {/* LINE */}
                   <div className="hidden md:block absolute top-0 -right-6 w-px h-full bg-gradient-to-b from-purple-600 to-purple-300"></div>
                   <div className="hidden md:block absolute top-8 -right-8 w-4 h-4 bg-purple-600 rounded-full"></div>
                 </div>
               </div>
 
-              {/* RIGHT SIDE - Details */}
+              {/* DETAILS */}
               <div className="space-y-6">
-                {/* Degree */}
                 <div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">
                     {edu.degree}
@@ -104,7 +102,6 @@ const Education = ({ setSelectedPage }: Props) => {
                   <p className="text-purple-600 font-medium">{edu.honors}</p>
                 </div>
 
-                {/* Stats */}
                 <div className="flex gap-6">
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex-1">
                     <p className="text-sm text-gray-500 mb-1">CGPA</p>
