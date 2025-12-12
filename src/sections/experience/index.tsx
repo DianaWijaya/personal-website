@@ -12,7 +12,6 @@ interface Experience {
   role: string;
   period: string;
   description: string;
-  achievements: string[];
   technologies: string[];
 }
 
@@ -25,65 +24,56 @@ const Experience = ({ setSelectedPage }: Props) => {
   const experiences: Experience[] = [
     {
       id: 1,
-      company: "Company",
-      role: "Role",
-      period: "Period - period",
-      description: "Description",
-      achievements: [
-        "Achievement 1",
-        "Achievement 2",
-        "Achievement 3"
+      company: "Moneylion Sdn Bhd",
+      role: "Full Stack Engineer Intern",
+      period: "Nov 2024 - Feb 2025",
+      description:
+        "Contributed to full-stack web application development using Spring Boot, React, and Redux while collaborating in a cross-functional Agile team.",
+      technologies: [
+        "Spring Boot",
+        "React",
+        "Redux",
+        "Java",
+        "TypeScript",
+        "MongoDB",
+        "REST APIs",
       ],
-      technologies: ["React", "TypeScript", "Next.js", "Tailwind"]
     },
     {
       id: 2,
-      company: "Company",
-      role: "Role",
-      period: "Period - period",
-      description: "Description",
-      achievements: [
-        "Achievement 1",
-        "Achievement 2",
-        "Achievement 3"
-      ],
-      technologies: ["React", "TypeScript", "Next.js", "Tailwind"]
+      company: "Monash University",
+      role: "Class Assistant",
+      period: "Jul 2024 - Jun 2025",
+      description:
+        "Supported four weekly tutorial classes by assisting students with technical questions, guiding them through complex OOP concepts, and collaborating with lecturers to address student challenges.",
+      technologies: ["Java", "Object-Oriented Design"],
     },
     {
       id: 3,
-      company: "Company",
-      role: "Role",
-      period: "Period - period",
-      description: "Description",
-      achievements: [
-        "Achievement 1",
-        "Achievement 2",
-        "Achievement 3"
-      ],
-      technologies: ["React", "TypeScript", "Next.js", "Tailwind"]
+      company: "Monash University Student Association (MUSA)",
+      role: "School of Information Technology Representative",
+      period: "Jan 2024 - Dec 2024",
+      description:
+        "Served as the primary liaison for 1,500 IT students, led subcommittees, and organized 26 events including workshops, competitions, and career sessions while bridging communication between students, faculty, and administration.",
+      technologies: [],
     },
-    {
-      id: 4,
-      company: "Company",
-      role: "Role",
-      period: "Period - period",
-      description: "Description",
-      achievements: [
-        "Achievement 1",
-        "Achievement 2",
-        "Achievement 3"
-      ],
-      technologies: ["React", "TypeScript", "Next.js", "Tailwind"]
-    },
+    // {
+    //   id: 4,
+    //   company: "Company",
+    //   role: "Role",
+    //   period: "Period - period",
+    //   description: "Description",
+    //   technologies: ["React", "TypeScript", "Next.js", "Tailwind"]
+    // },
   ];
 
   return (
     <section
       id="experience"
-      className="min-h-screen bg-gradient-to-b from-bg-white to-bg-light py-20 px-6 overflow-hidden"
+      className="min-h-screen overflow-hidden bg-gradient-to-b from-bg-white to-bg-light py-20 px-6"
     >
       <motion.div
-        className="max-w-7xl mx-auto"
+        className="mx-auto max-w-7xl"
         onViewportEnter={() => setSelectedPage(SelectedPage.Experience)}
       >
         {/* HEADER */}
@@ -95,26 +85,26 @@ const Experience = ({ setSelectedPage }: Props) => {
           transition={{ duration: 0.8 }}
         >
           <div className="relative mb-8">
-            <div className="text-[120px] md:text-[200px] font-bold text-purple-soft/30 leading-none text-center select-none">
+            <div className="select-none text-center text-[120px] font-bold leading-none text-purple-soft/30 md:text-[200px]">
               PATH
             </div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-5xl md:text-6xl font-bold text-text-dark">
+              <h2 className="text-5xl font-bold text-text-dark md:text-6xl">
                 EXPERIENCE
               </h2>
             </div>
           </div>
-          <p className="text-center text-lg text-text-medium">
+          {/* <p className="text-center text-lg text-text-medium">
             Scroll horizontally to explore my journey →
-          </p>
+          </p> */}
         </motion.div>
 
         {/* HORIZONTAL TIMELINE */}
         <div className="relative">
           {/* Progress bar */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-purple-soft/50 rounded-full overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-1 overflow-hidden rounded-full bg-purple-soft/50">
             <motion.div
-              className="h-full bg-purple-main origin-left"
+              className="h-full origin-left bg-purple-main"
               style={{ scaleX: scrollXProgress }}
             />
           </div>
@@ -122,16 +112,16 @@ const Experience = ({ setSelectedPage }: Props) => {
           {/* Scrollable container */}
           <div
             ref={containerRef}
-            className="flex gap-8 overflow-x-auto pb-8 pt-8 snap-x snap-mandatory scrollbar-hide"
-            style={{ 
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none',
+            className="scrollbar-hide flex snap-x snap-mandatory gap-8 overflow-x-auto pb-8 pt-8"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
             }}
           >
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.id}
-                className="flex-shrink-0 w-[400px] snap-center"
+                className="w-[400px] flex-shrink-0 snap-center"
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -140,113 +130,78 @@ const Experience = ({ setSelectedPage }: Props) => {
                 {/* Timeline dot and line */}
                 <div className="relative">
                   {/* Dot */}
-                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-main rounded-full border-4 border-white shadow-lg z-10" />
-                  
+                  <div className="absolute -top-8 left-1/2 z-10 h-4 w-4 -translate-x-1/2 transform rounded-full border-4 border-white bg-purple-main shadow-lg" />
+
                   {/* Vertical line connecting to card */}
-                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-purple-main/30" />
+                  <div className="absolute -top-8 left-1/2 h-8 w-0.5 -translate-x-1/2 transform bg-purple-main/30" />
                 </div>
 
                 {/* Card */}
-                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-2 border-purple-soft/50">
+                <div className="h-full rounded-2xl border-2 border-purple-soft/50 bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-2xl">
                   {/* Period badge */}
-                  <div className="inline-block bg-purple-soft px-4 py-1 rounded-full mb-4">
-                    <span className="text-purple-main font-semibold text-sm">
+                  <div className="mb-4 inline-block rounded-full bg-purple-soft px-4 py-1">
+                    <span className="text-sm font-semibold text-purple-main">
                       {exp.period}
                     </span>
                   </div>
 
                   {/* Company and role */}
-                  <h3 className="text-2xl font-bold text-text-dark mb-2">
+                  <h3 className="mb-2 text-2xl font-bold text-text-dark">
                     {exp.role}
                   </h3>
-                  <p className="text-purple-main font-semibold mb-4">
+                  <p className="mb-4 font-semibold text-purple-main">
                     {exp.company}
                   </p>
 
                   {/* Description */}
-                  <p className="text-text-medium text-sm leading-relaxed mb-4">
+                  <p className="mb-4 text-sm leading-relaxed text-text-medium">
                     {exp.description}
                   </p>
 
-                  {/* Achievements */}
-                  <div className="mb-4">
-                    <h4 className="text-text-dark font-semibold text-sm mb-2">
-                      Key Achievements:
-                    </h4>
-                    <ul className="space-y-1">
-                      {exp.achievements.map((achievement, idx) => (
-                        <li key={idx} className="text-text-medium text-xs flex items-start">
-                          <span className="text-purple-main mr-2">▸</span>
-                          {achievement}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
                   {/* Technologies */}
-                  <div>
-                    <h4 className="text-text-dark font-semibold text-sm mb-2">
-                      Technologies:
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-purple-soft text-purple-main text-xs font-medium rounded-full"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                  {exp.technologies?.length > 0 && (
+                    <div>
+                      <h4 className="mb-2 text-sm font-semibold text-text-dark">
+                        Technologies:
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {exp.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="rounded-full bg-purple-soft px-3 py-1 text-xs font-medium text-purple-main"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </motion.div>
             ))}
           </div>
 
           {/* Scroll hint */}
-          <div className="flex justify-center mt-4">
-            <div className="flex items-center gap-2 text-text-light text-sm">
+          {/* <div className="mt-4 flex justify-center">
+            <div className="flex items-center gap-2 text-sm text-text-light">
               <span>Drag to scroll</span>
-              <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                className="h-4 w-4 animate-bounce"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </div>
-          </div>
+          </div> */}
         </div>
-
-        {/* Summary stats
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-        >
-          <div className="bg-white p-6 rounded-xl text-center shadow-md">
-            <div className="text-4xl font-bold text-purple-main mb-2">5+</div>
-            <div className="text-text-medium text-sm">Years Experience</div>
-          </div>
-          <div className="bg-white p-6 rounded-xl text-center shadow-md">
-            <div className="text-4xl font-bold text-purple-main mb-2">30+</div>
-            <div className="text-text-medium text-sm">Projects Completed</div>
-          </div>
-          <div className="bg-white p-6 rounded-xl text-center shadow-md">
-            <div className="text-4xl font-bold text-purple-main mb-2">4</div>
-            <div className="text-text-medium text-sm">Companies</div>
-          </div>
-          <div className="bg-white p-6 rounded-xl text-center shadow-md">
-            <div className="text-4xl font-bold text-purple-main mb-2">15+</div>
-            <div className="text-text-medium text-sm">Technologies</div>
-          </div>
-        </motion.div> */}
       </motion.div>
-
-      <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   );
 };
