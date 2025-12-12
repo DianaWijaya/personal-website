@@ -26,7 +26,7 @@ const Contact = ({ setSelectedPage }: Props) => {
   return (
     <section 
       id="contact" 
-      className="min-h-screen bg-gradient-to-b from-bg-white to-bg-light py-20 px-6"
+      className="min-h-screen bg-gradient-to-b from-bg-white to-bg-light py-10 px-6"
     >
       <motion.div 
         className="max-w-4xl mx-auto"
@@ -67,14 +67,14 @@ const Contact = ({ setSelectedPage }: Props) => {
             method="POST"
           >
             {/* NAME */}
-            <div className="mb-6">
+            <div className="mb-4">
               <label className="block text-text-dark font-semibold mb-2 text-sm">
                 Your Name
               </label>
               <input
                 className={inputStyles}
                 type="text"
-                placeholder="John Doe"
+                placeholder="John Will"
                 {...register("name", {
                   required: true,
                   maxLength: 100,
@@ -96,7 +96,7 @@ const Contact = ({ setSelectedPage }: Props) => {
               <input
                 className={inputStyles}
                 type="text"
-                placeholder="john@example.com"
+                placeholder="johnwill@example.com"
                 {...register("email", {
                   required: true,
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -117,7 +117,7 @@ const Contact = ({ setSelectedPage }: Props) => {
               </label>
               <textarea
                 className={inputStyles}
-                placeholder="Tell me about your project..."
+                placeholder="Hello! I would like to get in touch with you..."
                 rows={6}
                 {...register("message", {
                   required: true,

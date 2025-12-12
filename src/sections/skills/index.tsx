@@ -85,7 +85,7 @@ const Skills = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="skills"
-      className="min-h-screen bg-gradient-to-b from-bg-light to-bg-white py-20 px-6"
+      className="min-h-screen bg-gradient-to-b from-bg-light to-bg-white py-10 px-6"
     >
       <motion.div
         className="max-w-7xl mx-auto"

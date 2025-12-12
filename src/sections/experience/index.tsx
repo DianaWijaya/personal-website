@@ -70,7 +70,7 @@ const Experience = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="experience"
-      className="min-h-screen overflow-hidden bg-gradient-to-b from-bg-white to-bg-light py-20 px-6"
+      className="min-h-screen overflow-hidden bg-gradient-to-b from-bg-white to-bg-light py-10 px-6"
     >
       <motion.div
         className="mx-auto max-w-7xl"

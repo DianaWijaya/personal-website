@@ -108,7 +108,7 @@ const Projects = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-gradient-to-b from-bg-white via-purple-soft/20 to-bg-light py-20 px-6"
+      className="min-h-screen bg-gradient-to-b from-bg-white via-purple-soft/20 to-bg-light py-10 px-6"
     >
       <motion.div
         className="max-w-7xl mx-auto"
