@@ -109,7 +109,7 @@ const Home = ({ setSelectedPage }: Props) => {
             transition={{ delay: 0.6, duration: 0.6 }}
           >
             <AnchorLink
-              href="#projects"
+              href="#aboutme"
               className="inline-block bg-purple-main text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-purple-light transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               MORE ABOUT ME
