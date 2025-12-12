@@ -1,5 +1,6 @@
 import GithubIcon from "@/assets/GithubIcon.png";
 import LinkedinIcon from "@/assets/LinkedinIcon.png";
+import EmailIcon from "@/assets/email.png";
 
 export const socialLinks = [
     {
@@ -14,11 +15,10 @@ export const socialLinks = [
       url: "https://linkedin.com/in/dianawijaya39",
       description: "Let's connect professionally"
     },
-    // Add more links as needed
     {
       name: "Email",
-      icon: null, // You can add an email icon if you have one
-      url: "mailto:your.email@example.com",
+      icon: EmailIcon,
+      url: "mailto:dianawijaya1234@gmail.com",
       description: "Send me a message",
       isEmail: true
     }

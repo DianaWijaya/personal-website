@@ -31,31 +31,50 @@ const Projects = ({ setSelectedPage }: Props) => {
       githubUrl: "https://github.com/yourusername/project1",
     },
     {
-      id: 2,
-      title: "Project Title",
-      description: "Description",
-      fullDescription: "Long Description",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/project1",
+      "id": 2,
+      "title": "Book Web Crawling & Monitoring System",
+      "description": "A full Python-based web crawler, scheduler, and API for scraping and monitoring data from books-to-scrape website.",
+      "fullDescription": "A complete book-scraping system built with Python with BeautifulSoup, custom scheduler, and FastAPI. The crawler extracts book titles, prices, ratings, categories, and descriptions from books.toscrape.com and stores them in MongoDB. A daily scheduler detects content changes and generates CSV reports, and lastly, a FastAPI service exposes endpoints with API-key authentication.",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "MongoDB",
+        "BeautifulSoup",
+        "APScheduler",
+      ],
+      "liveUrl": "",
+      "githubUrl": "https://github.com/DianaWijaya/book-web-crawling-project"
     },
     {
       id: 3,
-      title: "Project Title",
-      description: "Description",
-      fullDescription: "Long Description",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "JavaScript Tetris Game",
+      description: "A classic Tetris remake with all 7 tetrominoes, rotation system, scoring, levels, and fast-paced gameplay.",
+      fullDescription: "A modern TypeScript-based Tetris featuring all seven tetrominoes, smooth rotation with wall kicks, progressive speed levels, collision detection, instant drop, and responsive controls.",
+      technologies: [
+        "TypeScript", 
+        "RxJS", 
+        "HTML5 SVG", 
+        "CSS3", 
+        "Vite", 
+        "Functional Programming"
+      ],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/project1",
+      githubUrl: "https://github.com/DianaWijaya/javascript-tetris-game",
     },
     {
-      id: 4,
-      title: "Project Title",
-      description: "Description",
-      fullDescription: "Long Description",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/project1",
+      "id": 4,
+      "title": "Supermarket Point of Sale System",
+      "description": "A POS system built with Laravel frontend and Fiber/Go backend with PostgreSQL, supporting orders, products, transactions, and sales reporting.",
+      "fullDescription": "A full-stack Point of Sale system using Laravel for the frontend and Fiber/Go for the backend. It supports managing orders, products, and transactions, with daily and monthly sales reports, PostgreSQL integration, RESTful API endpoints, and a clean UI. Includes full CRUD operations, real-time order management, and structured backend logic.",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "Go (Fiber)",
+        "PostgreSQL",
+        "RestAPI",
+      ],
+      "liveUrl": "",
+      "githubUrl": "https://gitlab.com/dianawijaya1234-group/point-of-sale-project"
     },
     {
       id: 5,
@@ -114,7 +133,7 @@ const Projects = ({ setSelectedPage }: Props) => {
             </div>
           </div>
           <p className="text-center text-lg text-text-medium mt-8">
-            Click any project for details
+            Click project box for details
           </p>
         </motion.div>
 
@@ -386,7 +405,7 @@ const ProjectCard = ({
       <div className={`h-full min-h-[200px] rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between ${backgrounds[index % backgrounds.length]}`}>
         <div>
           <span className="text-purple-main font-semibold text-sm">
-            {String(index + 2).padStart(2, '0')}
+            {String(index + 1).padStart(2, '0')}
           </span>
           <h3 className="text-xl md:text-2xl font-bold text-text-dark mt-2 mb-3">
             {project.title}

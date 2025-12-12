@@ -58,7 +58,7 @@ const AboutMe = ({ setSelectedPage }: Props) => {
                   With experience as a Full-Stack Engineer Intern at Moneylion, I've worked on scalable architectures using Spring Boot, React, and Redux. I'm driven by a love for clean code, optimal performance, and creating solutions that make a real impact.
                 </p>
                 <p>
-                  Beyond coding, I've led initiatives at Monash University Student Association, organizing events for hundreds of students and serving as a liaison for over 1,500 IT students. I believe in continuous learning and enjoy taking on challenges that push me to grow.
+                  Beyond coding, I've led initiatives at Monash University Student Association, organizing events for hundreds of students and serving as a liaison for over 1,500 students. I believe in continuous learning and enjoy taking on challenges that push me to grow.
                 </p>
                 <p className="text-purple-main font-semibold pt-4">
                   Currently open to full-time opportunities in software development. Let's build something amazing together!
