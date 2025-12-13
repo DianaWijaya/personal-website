@@ -23,12 +23,18 @@ const Projects = ({ setSelectedPage }: Props) => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Project Title",
-      description: "Description",
-      fullDescription: "Long Description",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/project1",
+      title: "Personal Portfolio Website",
+      description: "A responsive personal website to showcase my projects, skills, and experience.",
+      fullDescription:
+        "The website you are viewing right now, is my personal portfolio website built to present my background, technical skills, and projects in a creative way. The site is fully responsive, features smooth animations, and focuses on clean UI/UX. The website is built with modern frontend tools.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+      ],
+      liveUrl: "https://dianawijaya.github.io/personal-website/",
+      githubUrl: "https://github.com/DianaWijaya/diana-personal-website",
     },
     {
       "id": 2,
@@ -76,33 +82,33 @@ const Projects = ({ setSelectedPage }: Props) => {
       "liveUrl": "",
       "githubUrl": "https://gitlab.com/dianawijaya1234-group/point-of-sale-project"
     },
-    {
-      id: 5,
-      title: "Project Title",
-      description: "Description",
-      fullDescription: "Long Description",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/project1",
-    },
-    {
-      id: 6,
-      title: "Project Title",
-      description: "Description",
-      fullDescription: "Long Description",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/project1",
-    },
-    {
-      id: 7,
-      title: "Project Title",
-      description: "Description",
-      fullDescription: "Long Description",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/project1",
-    },
+    // {
+    //   id: 5,
+    //   title: "Project Title",
+    //   description: "Description",
+    //   fullDescription: "Long Description",
+    //   technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    //   liveUrl: "https://example.com",
+    //   githubUrl: "https://github.com/yourusername/project1",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Project Title",
+    //   description: "Description",
+    //   fullDescription: "Long Description",
+    //   technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    //   liveUrl: "https://example.com",
+    //   githubUrl: "https://github.com/yourusername/project1",
+    // },
+    // {
+    //   id: 7,
+    //   title: "Project Title",
+    //   description: "Description",
+    //   fullDescription: "Long Description",
+    //   technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    //   liveUrl: "https://example.com",
+    //   githubUrl: "https://github.com/yourusername/project1",
+    // },
   ];
 
   return (
@@ -233,34 +239,34 @@ const Projects = ({ setSelectedPage }: Props) => {
           />
 
           {/* Project 5 */}
-          <ProjectCard 
+          {/* <ProjectCard 
             project={projects[4]} 
             index={4}
             colSpan="md:col-span-4"
             onSelect={() => setSelectedProject(projects[4])}
             onHoverStart={() => setHoveredId(5)}
             onHoverEnd={() => setHoveredId(null)}
-          />
+          /> */}
 
           {/* Project 6 */}
-          <ProjectCard 
+          {/* <ProjectCard 
             project={projects[5]} 
             index={5}
             colSpan="md:col-span-5"
             onSelect={() => setSelectedProject(projects[5])}
             onHoverStart={() => setHoveredId(6)}
             onHoverEnd={() => setHoveredId(null)}
-          />
+          /> */}
 
           {/* Project 7 */}
-          <ProjectCard 
+          {/* <ProjectCard 
             project={projects[6]} 
             index={6}
             colSpan="md:col-span-3"
             onSelect={() => setSelectedProject(projects[6])}
             onHoverStart={() => setHoveredId(7)}
             onHoverEnd={() => setHoveredId(null)}
-          />
+          /> */}
         </div>
 
         {/* FOOTER */}
