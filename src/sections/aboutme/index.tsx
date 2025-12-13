@@ -34,9 +34,6 @@ const AboutMe = ({ setSelectedPage }: Props) => {
               </h2>
             </div>
           </div>
-          {/* <p className="text-center text-lg text-text-medium mt-8">
-            Get to know the person behind the code
-          </p> */}
         </motion.div>
 
 

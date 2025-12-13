@@ -1,25 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+
   theme: {
+    screens: {
+      xs: "480px",
+      sm: "768px",
+      md: "1060px",
+    },
+
     extend: {
       colors: {
-        // MAIN BACKGROUND PALETTE
         "bg-white": "#ffffff",
-        "bg-light": "#f8fafc",   // near-white grey (similar to gray-50)
-        "bg-light-2": "#f1f5f9", // light soft grey (similar to gray-100)
+        "bg-light": "#f8fafc",
+        "bg-light-2": "#f1f5f9",
 
-        // TEXT COLORS
-        "text-dark": "#1e293b",  // slate-800
-        "text-medium": "#475569", // slate-600
-        "text-light": "#94a3b8",  // slate-400
+        "text-dark": "#1e293b",
+        "text-medium": "#475569",
+        "text-light": "#94a3b8",
 
-        // ACCENT — PURPLE
-        "purple-main": "#6d28d9", // deep purple (indigo-700)
-        "purple-light": "#8b5cf6", // brighter purple (violet-500)
-        "purple-soft": "#ede9fe",  // soft background purple
+        "purple-main": "#6d28d9",
+        "purple-light": "#8b5cf6",
+        "purple-soft": "#ede9fe",
 
-        // GLASS UI COLORS
         "glass-white": "rgba(255,255,255,0.7)",
         "glass-dark": "rgba(0,0,0,0.1)",
       },
@@ -34,25 +37,11 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
       },
 
-      content: {
-        evolvetext: "url('./assets/EvolveText.png')",
-        abstractwaves: "url('./assets/AbstractWaves.png')",
-        sparkles: "url('./assets/Sparkles.png')",
-        circles: "url('./assets/Circles.png')",
+      perspective: {
+        1000: "1000px",
       },
-
-      extend: {
-        perspective: {
-          1000: "1000px",
-        },
-      }
-    },
-
-    screens: {
-      xs: "480px",
-      sm: "768px",
-      md: "1060px",
     },
   },
+
   plugins: [],
 };
