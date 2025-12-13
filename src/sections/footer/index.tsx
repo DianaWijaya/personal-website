@@ -1,28 +1,48 @@
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
-import { HiDocumentText } from "react-icons/hi";
+import instagram from "@/assets/instagram-grey.png";
+import linkedin from "@/assets/linkedin-grey.png";
+import github from "@/assets/github-grey.png";
+import resume from "@/assets/resume-grey.png";
+import whatsapp from "@/assets/whatsapp-grey.png";
 
 const Footer = () => {
   return (
     <footer className="bg-cream-10 py-10">
       <div className="flex flex-col items-center gap-4">
-         {/* Copyright */}
-         <p className="text-sm text-center text-brown-800">
-          &copy; {new Date().getFullYear()} Diana Wijaya. All Rights Reserved.
+        <p className="text-sm text-center text-brown-800">
+          © {new Date().getFullYear()} Diana Wijaya. All Rights Reserved.
         </p>
-        
-        {/* Social Icons */}
+
         <div className="flex gap-6">
           <a href="https://www.linkedin.com/in/dianawijaya39" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="text-brown-700 text-2xl hover:text-brown-900 transition duration-300" />
+            <img
+              src={linkedin}
+              alt="LinkedIn"
+              className="w-6 h-6 opacity-70 hover:opacity-100 transition"
+            />
           </a>
+
           <a href="https://github.com/DianaWijaya" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="text-brown-700 text-2xl hover:text-brown-900 transition duration-300" />
+            <img
+              src={github}
+              alt="GitHub"
+              className="w-6 h-6 opacity-60 hover:opacity-100 transition"
+            />
           </a>
-          <a href="https://www.instagram.com/dianawijaya_39" target="_blank" rel="noopener noreferrer">
-            <FaInstagram className="text-brown-700 text-2xl hover:text-brown-900 transition duration-300" />
+
+          <a href="https://wa.me/6281299282807" target="_blank" rel="noopener noreferrer">
+            <img
+              src={whatsapp}
+              alt="WhatsApp"
+              className="w-6 h-6 opacity-70 hover:opacity-100 transition"
+            />
           </a>
+
           <a href="https://drive.google.com/file/d/1EIxzsMWoxSNsqmQ2IP49dCop_f-s16Xf/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-            <HiDocumentText className="text-brown-700 text-2xl hover:text-brown-900 transition duration-300" />
+            <img
+              src={resume}
+              alt="Resume"
+              className="w-6 h-6 opacity-70 hover:opacity-100 transition"
+            />
           </a>
         </div>
       </div>
