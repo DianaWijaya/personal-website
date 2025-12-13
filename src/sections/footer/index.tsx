@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
 import { HiDocumentText } from "react-icons/hi";
 
 const Footer = () => {
