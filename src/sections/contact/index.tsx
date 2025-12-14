@@ -1,25 +1,57 @@
 import { useForm } from "react-hook-form";
 import { SelectedPage } from "@/reusables/types";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
 const Contact = ({ setSelectedPage }: Props) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
   const inputStyles = `mb-5 w-full rounded-xl bg-white border-2 border-purple-soft/50 text-text-dark
   px-5 py-3 placeholder-text-light focus:border-purple-main focus:outline-none transition-colors duration-300`;
 
   const {
     register,
     trigger,
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = async (e: any) => {
+    e.preventDefault();
     const isValid = await trigger();
+    
     if (!isValid) {
-      e.preventDefault();
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.target);
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitSuccess(true);
+        reset();
+        setTimeout(() => setSubmitSuccess(false), 5000);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -60,12 +92,14 @@ const Contact = ({ setSelectedPage }: Props) => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <form
-            target="_blank"
-            onSubmit={onSubmit}
-            action="https://formsubmit.co/99c81f49a1a534e947f7693183a12389"
-            method="POST"
-          >
+          <form onSubmit={onSubmit}>
+            {/* Web3Forms Access Key */}
+            <input 
+              type="hidden" 
+              name="access_key" 
+              value="8d697bca-0ba9-46bf-b4ec-835601a11f5f"
+            />
+
             {/* NAME */}
             <div className="mb-4">
               <label className="block text-text-dark font-semibold mb-2 text-sm">
@@ -95,7 +129,7 @@ const Contact = ({ setSelectedPage }: Props) => {
               </label>
               <input
                 className={inputStyles}
-                type="text"
+                type="email"
                 placeholder="johnwill@example.com"
                 {...register("email", {
                   required: true,
@@ -132,13 +166,25 @@ const Contact = ({ setSelectedPage }: Props) => {
               )}
             </div>
 
+            {/* SUCCESS MESSAGE */}
+            {submitSuccess && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-xl"
+              >
+                ✓ Message sent successfully! I'll get back to you soon.
+              </motion.div>
+            )}
+
             {/* SUBMIT BUTTON */}
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="bg-purple-main text-white px-12 py-4 rounded-xl font-semibold text-lg hover:bg-purple-light transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                disabled={isSubmitting}
+                className="bg-purple-main text-white px-12 py-4 rounded-xl font-semibold text-lg hover:bg-purple-light transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </div>
           </form>

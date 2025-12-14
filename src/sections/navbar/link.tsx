@@ -17,6 +17,7 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
       `}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
+      offset={70}
     >
       {page}
     </AnchorLink>

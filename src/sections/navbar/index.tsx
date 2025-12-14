@@ -21,58 +21,69 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     <nav>
       <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6 transition-all`}>
         <div className={`${flexBetween} mx-auto w-5/6`}>
-          <div className={`${flexBetween} w-full gap-16`}>
-            {isAboveMediumScreens ? (
-              <div className={`${flexBetween} w-full`}>
-                <div className={`${flexBetween} gap-8 text-sm`}>
-                  <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                  <Link page="About Me" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                  <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                  <Link page="Skills" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                  <Link page="Experience" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                  <Link page="Education" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                </div>
+          {isAboveMediumScreens ? (
+            <div className={`${flexBetween} w-full`}>
+              <div className={`${flexBetween} gap-8 text-sm`}>
+                <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                <Link page="About Me" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                <Link page="Skills" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                <Link page="Experience" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                <Link page="Education" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+              </div>
               <div className={`${flexBetween} gap-8`}>
-            <ActionButton
-              setSelectedPage={setSelectedPage}
-            >
-              Contact
-            </ActionButton>
-          </div>
-        </div>
-            ) : (
+                <ActionButton setSelectedPage={setSelectedPage}>
+                  Contact
+                </ActionButton>
+              </div>
+            </div>
+          ) : (
+            <div className="flex w-full justify-end">
               <button
-                className="rounded-full bg-gray-800/70 p-2 hover:bg-gray-800"
+                className="p-2"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
-                <Bars3Icon className="h-6 w-6 text-cream-10" />
+                <Bars3Icon className="h-8 w-8 text-purple-600 hover:text-purple-700 transition-colors" />
               </button>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
 
       {/* MOBILE MENU MODAL */}
-      {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-cream-10 shadow-xl">
-          {/* CLOSE ICON */}
-          <div className="flex justify-end p-6">
-            <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              <XMarkIcon className="h-6 w-6 text-brown-500 hover:text-brown-600 transition-all" />
-            </button>
-          </div>
+      {!isAboveMediumScreens && (
+        <>
+          {/* Backdrop */}
+          <div 
+            className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
+              isMenuToggled ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+            }`}
+            onClick={() => setIsMenuToggled(false)}
+          />
+          
+          {/* Menu */}
+          <div className={`fixed right-0 top-0 z-50 h-full w-[300px] bg-purple-100/70 backdrop-blur-md shadow-xl transition-transform duration-300 ease-in-out ${
+            isMenuToggled ? 'translate-x-0' : 'translate-x-full'
+          }`}>
+            {/* CLOSE ICON */}
+            <div className="flex justify-end p-6">
+              <button onClick={() => setIsMenuToggled(false)}>
+                <XMarkIcon className="h-6 w-6 text-purple-600 hover:text-purple-700 transition-colors" />
+              </button>
+            </div>
 
-          {/* MENU ITEMS */}
-           <div className="ml-[20%] flex flex-col gap-6 text-xl text-gray-800">
-            <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-            <Link page="About Me" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-            <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-            <Link page="Skills" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-            <Link page="Experience" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-            <Link page="Education" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-            <Link page="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            {/* MENU ITEMS */}
+            <div className="ml-[20%] flex flex-col gap-6 text-xl text-gray-800">
+              <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+              <Link page="About Me" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+              <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+              <Link page="Skills" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+              <Link page="Experience" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+              <Link page="Education" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+              <Link page="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            </div>
           </div>
-        </div>
+        </>
       )}
     </nav>
   );
