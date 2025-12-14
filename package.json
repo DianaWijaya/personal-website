@@ -3,38 +3,37 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dianawijaya.github.io/personal-website/",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.13",
+    "@heroicons/react": "^2.1.5",
     "@tailwindcss/postcss": "^4.0.9",
-    "framer-motion": "^7.6.19",
+    "framer-motion": "^11.11.17",
     "lucide-react": "^0.477.0",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.40.0",
-    "react-icons": "4.10.1"
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.2",
+    "react-icons": "^5.3.0"
   },
   "devDependencies": {
-    "@types/node": "^18.19.130",
-    "@types/react": "^18.0.26",
+    "@types/node": "^20.17.6",
+    "@types/react": "^18.3.12",
     "@types/react-anchor-link-smooth-scroll": "^1.0.2",
-    "@types/react-dom": "^18.0.9",
-    "@vitejs/plugin-react": "^3.0.0",
-    "autoprefixer": "^10.4.13",
-    "gh-pages": "^6.3.0",
-    "postcss": "^8.4.20",
-    "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.2.8",
-    "tailwindcss": "^3.2.4",
-    "typescript": "^5.3.3",
-    "vite": "^4.0.0"
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
   }
 }
