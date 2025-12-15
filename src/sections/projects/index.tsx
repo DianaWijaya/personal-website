@@ -64,7 +64,7 @@ const Projects = ({ setSelectedPage }: Props) => {
         "Vite", 
         "Functional Programming"
       ],
-      liveUrl: "diana-tetris-game.vercel.app",
+      liveUrl: "https://diana-tetris-game.vercel.app",
       githubUrl: "https://github.com/DianaWijaya/javascript-tetris-game",
     },
     {
@@ -191,7 +191,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                       onClick={(e) => e.stopPropagation()}
                       className="bg-white text-purple-main py-2 px-6 rounded-xl font-semibold hover:bg-white/90 transition-all"
                     >
-                      View Live
+                      View
                     </a>
                   )}
                   <a
