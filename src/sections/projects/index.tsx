@@ -33,7 +33,7 @@ const Projects = ({ setSelectedPage }: Props) => {
         "Vite",
         "Tailwind CSS",
       ],
-      liveUrl: "https://dianawijaya.github.io/personal-website/",
+      liveUrl: "https://dianawijaya.id",
       githubUrl: "https://github.com/DianaWijaya/diana-personal-website",
     },
     {
@@ -64,7 +64,7 @@ const Projects = ({ setSelectedPage }: Props) => {
         "Vite", 
         "Functional Programming"
       ],
-      liveUrl: "https://example.com",
+      liveUrl: "diana-tetris-game.vercel.app",
       githubUrl: "https://github.com/DianaWijaya/javascript-tetris-game",
     },
     {
@@ -80,7 +80,7 @@ const Projects = ({ setSelectedPage }: Props) => {
         "RestAPI",
       ],
       "liveUrl": "",
-      "githubUrl": "https://gitlab.com/dianawijaya1234-group/point-of-sale-project"
+      "githubUrl": "https://github.com/DianaWijaya/point-of-sale-project"
     },
     // {
     //   id: 5,
