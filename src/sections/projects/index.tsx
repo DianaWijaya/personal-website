@@ -101,15 +101,24 @@ const Projects = ({ setSelectedPage }: Props) => {
       liveUrl: "https://diana-tetris-game.vercel.app",
       githubUrl: "https://github.com/DianaWijaya/javascript-tetris-game",
     },
-    // {
-    //   id: 6,
-    //   title: "Project Title",
-    //   description: "Description",
-    //   fullDescription: "Long Description",
-    //   technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    //   liveUrl: "https://example.com",
-    //   githubUrl: "https://github.com/yourusername/project1",
-    // },
+    {
+      id: 6,
+      title: "Finance Tracker Web App - Costally",
+      description:
+        "A personal finance platform that automates expense tracking, income management, and budgeting, with real-time financial insights.",
+      fullDescription:
+        "A personal finance management platform that helps users track expenses, manage income, and apply zero-based budgeting with real-time visibility into spending and net worth. Built with a Node.js and TypeScript backend, Prisma ensures reliable financial transactions, while Snowflake supports long-term trend analysis. The application emphasizes security, performance, and a clean, responsive user interface.",
+      technologies: [
+        "Node.js",
+        "Snowflake",
+        "Prisma",
+        "TypeScript",
+        "Auth (bcrypt)",
+        "Tailwind CSS"
+      ],
+      liveUrl: "",
+      githubUrl: "https://github.com/DianaWijaya/costally-finance-tracker"
+    },
     // {
     //   id: 7,
     //   title: "Project Title",
@@ -259,14 +268,14 @@ const Projects = ({ setSelectedPage }: Props) => {
           />
 
           {/* Project 6 */}
-          {/* <ProjectCard 
+          <ProjectCard 
             project={projects[5]} 
             index={5}
             colSpan="md:col-span-5"
             onSelect={() => setSelectedProject(projects[5])}
             onHoverStart={() => setHoveredId(6)}
             onHoverEnd={() => setHoveredId(null)}
-          /> */}
+          />
 
           {/* Project 7 */}
           {/* <ProjectCard 
