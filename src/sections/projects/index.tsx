@@ -52,20 +52,23 @@ const Projects = ({ setSelectedPage }: Props) => {
       "githubUrl": "https://github.com/DianaWijaya/book-web-crawling-project"
     },
     {
-      id: 3,
-      title: "JavaScript Tetris Game",
-      description: "A classic Tetris remake with all 7 tetrominoes, rotation system, scoring, levels, and fast-paced gameplay.",
-      fullDescription: "A modern TypeScript-based Tetris featuring all seven tetrominoes, smooth rotation with wall kicks, progressive speed levels, collision detection, instant drop, and responsive controls.",
+      id: 5,
+      title: "TinyML Model Downsizing Tool",
+      description:
+        "A TinyML optimization and deployment project that compresses deep learning models for real-time human detection on microcontrollers.",
+      fullDescription:
+        "This project focuses on optimizing and deploying a human detection deep learning model on resource-constrained microcontrollers using TinyML techniques. The core objective was to eliminate server-side inference in surveillance systems by enabling fully on-device intelligence.\n\nThe project involved extensive research and implementation of model downsizing techniques including Neural Architecture Search (MCUNet & OFA), channel and block-level pruning, Bayesian optimization, int8 quantization, and knowledge distillation. A MobileNetV2-based model was compressed by nearly 900% while maintaining reliable accuracy and real-time performance.\n\nThe final optimized model was successfully deployed on an Arduino Nano 33 BLE Sense with an Arducam camera, achieving real-time human detection with a model size under 1MB and low memory usage.\n\nTo make TinyML optimization more accessible, a Streamlit-based Model Downsizing Tool was developed. This tool allows users to upload their own MobileNetV2 models and apply pruning, quantization, fine-tuning, and knowledge distillation through a user-friendly interface, with downloadable PyTorch and TFLite outputs ready for embedded deployment.",
       technologies: [
-        "TypeScript", 
-        "RxJS", 
-        "HTML5 SVG", 
-        "CSS3", 
-        "Vite", 
-        "Functional Programming"
+        "Python",
+        "Streamlit",
+        "C++",
+        "PyTorch",
+        "TinyML",
+        " TFLite",
+        "Arduino",
       ],
-      liveUrl: "https://diana-tetris-game.vercel.app",
-      githubUrl: "https://github.com/DianaWijaya/javascript-tetris-game",
+      liveUrl: "https://downsizing-tool-v2.streamlit.app",
+      githubUrl: "https://github.com/DianaWijaya/MCS14-Model-Downsizing-Tool-Streamlit",
     },
     {
       "id": 4,
@@ -82,15 +85,22 @@ const Projects = ({ setSelectedPage }: Props) => {
       "liveUrl": "",
       "githubUrl": "https://github.com/DianaWijaya/point-of-sale-project"
     },
-    // {
-    //   id: 5,
-    //   title: "Project Title",
-    //   description: "Description",
-    //   fullDescription: "Long Description",
-    //   technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    //   liveUrl: "https://example.com",
-    //   githubUrl: "https://github.com/yourusername/project1",
-    // },
+    {
+      id: 5,
+      title: "JavaScript Tetris Game",
+      description: "A classic Tetris remake with all 7 tetrominoes, rotation system, scoring, levels, and fast-paced gameplay.",
+      fullDescription: "A modern TypeScript-based Tetris featuring all seven tetrominoes, smooth rotation with wall kicks, progressive speed levels, collision detection, instant drop, and responsive controls.",
+      technologies: [
+        "TypeScript", 
+        "RxJS", 
+        "HTML5 SVG", 
+        "CSS3", 
+        "Vite", 
+        "Functional Programming"
+      ],
+      liveUrl: "https://diana-tetris-game.vercel.app",
+      githubUrl: "https://github.com/DianaWijaya/javascript-tetris-game",
+    },
     // {
     //   id: 6,
     //   title: "Project Title",
@@ -239,14 +249,14 @@ const Projects = ({ setSelectedPage }: Props) => {
           />
 
           {/* Project 5 */}
-          {/* <ProjectCard 
+          <ProjectCard 
             project={projects[4]} 
             index={4}
             colSpan="md:col-span-4"
             onSelect={() => setSelectedProject(projects[4])}
             onHoverStart={() => setHoveredId(5)}
             onHoverEnd={() => setHoveredId(null)}
-          /> */}
+          />
 
           {/* Project 6 */}
           {/* <ProjectCard 
