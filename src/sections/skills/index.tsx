@@ -29,6 +29,7 @@ const Skills = ({ setSelectedPage }: Props) => {
     { name: "Golang", level: "intermediate", category: "Languages" },
     { name: "Ruby", level: "intermediate", category: "Languages" },
     { name: "R", level: "intermediate", category: "Languages" },
+    { name: "Dart", level: "intermediate", category: "Languages" },
     
     // Frontend
     { name: "React", level: "expert", category: "Frontend" },
@@ -38,6 +39,10 @@ const Skills = ({ setSelectedPage }: Props) => {
     { name: "Tailwind", level: "advanced", category: "Frontend" },
     { name: "Bootstrap", level: "intermediate", category: "Frontend" },
     { name: "Angular", level: "intermediate", category: "Frontend" },
+    { name: "Node.js", level: "intermediate", category: "Frontend" },
+    { name: "Flutter", level: "intermediate", category: "Frontend" },
+    { name: "Router", level: "intermediate", category: "Frontend" },
+    { name: "Express", level: "intermediate", category: "Frontend" },
 
     // Backend
     { name: "Spring Boot", level: "advanced", category: "Backend" },
@@ -48,6 +53,8 @@ const Skills = ({ setSelectedPage }: Props) => {
     { name: "BeautifulSoup", level: "intermediate", category: "Backend" },
     { name: "Scrapy", level: "intermediate", category: "Backend" },
     { name: "Selenium", level: "intermediate", category: "Backend" },
+    { name: "Supabase", level: "intermediate", category: "Backend" },
+    { name: "Prisma", level: "intermediate", category: "Backend" },
     
     // Others
     { name: "Git", level: "advanced", category: "Others" },
