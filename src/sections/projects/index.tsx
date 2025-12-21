@@ -261,7 +261,7 @@ const Projects = ({ setSelectedPage }: Props) => {
           <ProjectCard 
             project={projects[4]} 
             index={4}
-            colSpan="md:col-span-4"
+            colSpan="md:col-span-5" // 4
             onSelect={() => setSelectedProject(projects[4])}
             onHoverStart={() => setHoveredId(5)}
             onHoverEnd={() => setHoveredId(null)}
@@ -271,7 +271,7 @@ const Projects = ({ setSelectedPage }: Props) => {
           <ProjectCard 
             project={projects[5]} 
             index={5}
-            colSpan="md:col-span-5"
+            colSpan="md:col-span-7" // 5
             onSelect={() => setSelectedProject(projects[5])}
             onHoverStart={() => setHoveredId(6)}
             onHoverEnd={() => setHoveredId(null)}
