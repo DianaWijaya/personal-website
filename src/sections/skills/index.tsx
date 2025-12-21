@@ -46,7 +46,6 @@ const Skills = ({ setSelectedPage }: Props) => {
 
     // Backend
     { name: "Spring Boot", level: "advanced", category: "Backend" },
-    { name: "Node.js", level: "advanced", category: "Backend" },
     { name: "PostgreSQL", level: "intermediate", category: "Backend" },
     { name: "MongoDB", level: "advanced", category: "Backend" },
     { name: "Firebase", level: "intermediate", category: "Backend" },
