@@ -119,15 +119,15 @@ const Projects = ({ setSelectedPage }: Props) => {
       liveUrl: "",
       githubUrl: "https://github.com/DianaWijaya/costally-finance-tracker"
     },
-    // {
-    //   id: 7,
-    //   title: "Project Title",
-    //   description: "Description",
-    //   fullDescription: "Long Description",
-    //   technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    //   liveUrl: "https://example.com",
-    //   githubUrl: "https://github.com/yourusername/project1",
-    // },
+    {
+      id: 7,
+      title: "Baking Recipe Mobile App",
+      description: "A simple mobile app for browsing and saving baking recipes, with ingredient lists and step-by-step instructions.",
+      fullDescription: "",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/yourusername/project1",
+    },
   ];
 
   return (
