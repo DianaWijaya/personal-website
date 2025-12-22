@@ -24,9 +24,13 @@ export interface Skill {
   category: string;
 }
 
-export interface ExperienceElement {
-  organization: string;
-  position: string;
-  description: string;
-  date: string;
+export interface Education {
+  id: number;
+  institution: string;
+  degree: string;
+  period: string;
+  location: string;
+  gpa: string;
+  wam: string;
+  honors: string;
 }
