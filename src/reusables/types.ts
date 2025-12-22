@@ -8,14 +8,14 @@ export enum SelectedPage {
   Contact = "contact",
 }
 
-export interface ProjectElement {
-  icon: JSX.Element;
+export interface Project {
+  id: number;
   title: string;
-  shortDescription: string;
-  longDescription: string;
-  skillsUsed: Array<{ image: string; name: string }>;
-  relatedLink: string; 
-  yearCreated: string;
+  description: string;
+  fullDescription: string;
+  technologies: string[];
+  liveUrl?: string;
+  githubUrl: string;
 }
 
 export interface ExperienceElement {
