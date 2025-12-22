@@ -46,3 +46,12 @@ export interface Education {
   wam: string;
   honors: string;
 }
+
+export interface Experience {
+  id: number;
+  company: string;
+  role: string;
+  period: string;
+  description: string;
+  technologies: string[];
+}
