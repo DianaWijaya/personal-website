@@ -8,6 +8,18 @@ export enum SelectedPage {
   Contact = "contact",
 }
 
+export interface SocialLink {
+  name: string;
+  url: string;
+  icon?: string;
+  greyIcon?: string;
+  description?: string;
+  isEmail?: boolean;
+  homeVisibility: boolean;
+  aboutMeVisibility: boolean;
+  footerVisibility: boolean;
+}
+
 export interface Project {
   id: number;
   title: string;
