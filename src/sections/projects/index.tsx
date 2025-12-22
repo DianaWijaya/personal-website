@@ -2,7 +2,7 @@ import { SelectedPage } from "@/reusables/types";
 import { motion } from "framer-motion";
 import { projectsData } from "@/reusables/data/projectsData";
 import { useProjectSelection } from "@/hooks/useProjectSelection";
-import { ProjectHeader } from "./ProjectHeader";
+import { SectionHeader } from "@/components/SectionHeader";
 import { ProjectCard } from "./ProjectCard";
 import { ProjectModal } from "./ProjectModal";
 
@@ -23,7 +23,11 @@ const Projects = ({ setSelectedPage }: Props) => {
         className="max-w-7xl mx-auto"
         onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
       >
-        <ProjectHeader />
+        <SectionHeader 
+          backgroundText="WORK" 
+          mainText="PROJECTS"
+          subtitle="Click project box for details"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
           {/* Project 1 - Large Featured */}
