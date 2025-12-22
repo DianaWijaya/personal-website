@@ -18,6 +18,12 @@ export interface Project {
   githubUrl: string;
 }
 
+export interface Skill {
+  name: string;
+  level: "expert" | "advanced" | "intermediate";
+  category: string;
+}
+
 export interface ExperienceElement {
   organization: string;
   position: string;
