@@ -5,6 +5,7 @@ export enum SelectedPage {
   Skills = "skills",
   Experience = "experience",
   Education = "education",
+  Certifications = "certifications",
   Contact = "contact",
 }
 
@@ -54,4 +55,13 @@ export interface Experience {
   period: string;
   description: string;
   technologies: string[];
+}
+
+export interface Certification {
+  id: number;
+  title: string;
+  issuer: string;
+  year: string;
+  description: string;
+  certificateUrl?: string;
 }
