@@ -7,6 +7,7 @@ import Footer from "@/sections/footer";
 import Skills from "@/sections/skills";
 import Education from "@/sections/education";
 import Experience from "@/sections/experience";
+import Certifications from "@/sections/certifications";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "@/reusables/types";
 
@@ -41,6 +42,7 @@ function App() {
       <Skills setSelectedPage={setSelectedPage} />
       <Experience setSelectedPage={setSelectedPage} />
       <Education setSelectedPage={setSelectedPage} />
+      <Certifications setSelectedPage={setSelectedPage} />
       <Contact setSelectedPage={setSelectedPage} />
       <Footer />
     </div>
