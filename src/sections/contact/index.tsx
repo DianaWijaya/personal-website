@@ -58,7 +58,7 @@ const Contact = ({ setSelectedPage }: Props) => {
   return (
     <section 
       id="contact" 
-      className="min-h-screen bg-gradient-to-b from-bg-white to-bg-light py-10 px-6"
+      className="min-h-screen bg-gradient-to-b from-bg-light to-bg-white py-10 px-6"
     >
       <motion.div 
         className="max-w-4xl mx-auto"

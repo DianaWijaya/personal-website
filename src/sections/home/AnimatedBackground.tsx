@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const AnimatedBackground = () => {
   return (
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-purple-100 to-blue-100">
       {/* Floating circles */}
       <motion.div
         className="absolute top-20 left-20 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
