@@ -19,7 +19,7 @@ export const projectsData: Project[] = [
     {
       "id": 2,
       "title": "Book Web Crawling & Monitoring System",
-      "description": "A full Python-based web crawler, scheduler, and API for scraping and monitoring data from books-to-scrape website.",
+      "description": "A full Python-based web crawler, scheduler, and API for scraping and monitoring data from books-to-scrape.",
       "fullDescription": "A complete book-scraping system built with Python with BeautifulSoup, custom scheduler, and FastAPI. The crawler extracts book titles, prices, ratings, categories, and descriptions from books.toscrape.com and stores them in MongoDB. A daily scheduler detects content changes and generates CSV reports, and lastly, a FastAPI service exposes endpoints with API-key authentication.",
       "technologies": [
         "Python",
@@ -32,23 +32,24 @@ export const projectsData: Project[] = [
       "githubUrl": "https://github.com/DianaWijaya/book-web-crawling-project"
     },
     {
-      id: 5,
-      title: "TinyML Model Downsizing Tool",
+      id: 3,
+      title: "Finance Tracker Web App - Costally",
       description:
-        "A TinyML optimization and deployment project that compresses deep learning models for real-time human detection on microcontrollers.",
+        "A personal finance platform featuring AI-powered budget assistance, expense tracking, and real-time financial insights.",
       fullDescription:
-        "This project focuses on optimizing and deploying a human detection deep learning model on resource-constrained microcontrollers using TinyML techniques. The core objective was to eliminate server-side inference in surveillance systems by enabling fully on-device intelligence.\n\nThe project involved extensive research and implementation of model downsizing techniques including Neural Architecture Search (MCUNet & OFA), channel and block-level pruning, Bayesian optimization, int8 quantization, and knowledge distillation. A MobileNetV2-based model was compressed by nearly 900% while maintaining reliable accuracy and real-time performance.\n\nThe final optimized model was successfully deployed on an Arduino Nano 33 BLE Sense with an Arducam camera, achieving real-time human detection with a model size under 1MB and low memory usage.\n\nTo make TinyML optimization more accessible, a Streamlit-based Model Downsizing Tool was developed. This tool allows users to upload their own MobileNetV2 models and apply pruning, quantization, fine-tuning, and knowledge distillation through a user-friendly interface, with downloadable PyTorch and TFLite outputs ready for embedded deployment.",
+        "A personal finance management platform that helps users track expenses, manage income, and apply zero-based budgeting with real-time visibility into spending and income. The app features AI-powered budget assistance using Google Gemini AI to provide personalized budgeting tips and financial insights. Users can link bank accounts for automated transaction tracking, categorize expenses, and set financial goals. The platform offers interactive analytics with charts and graphs to visualize spending patterns and progress towards goals, and is powered by a smart AI chatbot for instant financial support.",
       technologies: [
-        "Python",
-        "Streamlit",
-        "C++",
-        "PyTorch",
-        "TinyML",
-        " TFLite",
-        "Arduino",
+        "React Router",
+        "TypeScript",
+        "Node.js",
+        "Prisma",
+        "Supabase",
+        "Tailwind CSS",
+        "Google Gemini AI",
+        "OAuth (bcrypt)",
       ],
-      liveUrl: "https://downsizing-tool-v2.streamlit.app",
-      githubUrl: "https://github.com/DianaWijaya/MCS14-Model-Downsizing-Tool-Streamlit",
+      liveUrl: "https://costally.vercel.app",
+      githubUrl: "https://github.com/DianaWijaya/budget-planner-project"
     },
     {
       "id": 4,
@@ -83,21 +84,22 @@ export const projectsData: Project[] = [
     },
     {
       id: 6,
-      title: "Finance Tracker Web App - Costally",
+      title: "TinyML Model Downsizing Tool",
       description:
-        "A personal finance platform that automates expense tracking, income management, and budgeting, with real-time financial insights.",
+        "A TinyML optimization and deployment project that compresses deep learning models for real-time human detection on microcontrollers.",
       fullDescription:
-        "A personal finance management platform that helps users track expenses, manage income, and apply zero-based budgeting with real-time visibility into spending and net worth. Built with a Node.js and TypeScript backend, Prisma ensures reliable financial transactions, while Snowflake supports long-term trend analysis. The application emphasizes security, performance, and a clean, responsive user interface.",
+        "This project focuses on optimizing and deploying a human detection deep learning model on resource-constrained microcontrollers using TinyML techniques. The core objective was to eliminate server-side inference in surveillance systems by enabling fully on-device intelligence.\n\nThe project involved extensive research and implementation of model downsizing techniques including Neural Architecture Search (MCUNet & OFA), channel and block-level pruning, Bayesian optimization, int8 quantization, and knowledge distillation. A MobileNetV2-based model was compressed by nearly 900% while maintaining reliable accuracy and real-time performance.\n\nThe final optimized model was successfully deployed on an Arduino Nano 33 BLE Sense with an Arducam camera, achieving real-time human detection with a model size under 1MB and low memory usage.\n\nTo make TinyML optimization more accessible, a Streamlit-based Model Downsizing Tool was developed. This tool allows users to upload their own MobileNetV2 models and apply pruning, quantization, fine-tuning, and knowledge distillation through a user-friendly interface, with downloadable PyTorch and TFLite outputs ready for embedded deployment.",
       technologies: [
-        "Node.js",
-        "Snowflake",
-        "Prisma",
-        "TypeScript",
-        "Auth (bcrypt)",
-        "Tailwind CSS"
+        "Python",
+        "Streamlit",
+        "C++",
+        "PyTorch",
+        "TinyML",
+        " TFLite",
+        "Arduino",
       ],
-      liveUrl: "",
-      githubUrl: "https://github.com/DianaWijaya/costally-finance-tracker"
+      liveUrl: "https://downsizing-tool-v2.streamlit.app",
+      githubUrl: "https://github.com/DianaWijaya/MCS14-Model-Downsizing-Tool-Streamlit",
     },
     {
       id: 7,
