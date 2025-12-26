@@ -54,7 +54,7 @@ export const socialLinks: SocialLink[] = [
   {
     name: "Resume",
     greyIcon: resumeGrey,
-    url: "https://drive.google.com/file/d/1EIxzsMWoxSNsqmQ2IP49dCop_f-s16Xf/view?usp=sharing",
+    url: "https://drive.google.com/file/d/17KRGnO2wCJaBoPjOs4xx_3-eJeKazySn/view?usp=sharing",
     description: "View my resume",
     homeVisibility: false,
     aboutMeVisibility: false,
