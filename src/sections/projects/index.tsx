@@ -133,7 +133,7 @@ const Projects = ({ setSelectedPage }: Props) => {
 
           <ProjectCard 
             project={projectsData[5]} 
-            index={0}
+            index={4}
             colSpan="md:col-span-7"
             onSelect={() => handleSelect(projectsData[5])}
             onHoverStart={() => handleHover(6)}
