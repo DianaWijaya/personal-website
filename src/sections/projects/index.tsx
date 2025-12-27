@@ -47,7 +47,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                 <div className="absolute bottom-10 left-10 w-60 h-60 bg-white rounded-full blur-3xl"></div>
               </div>
               
-              <div className="relative h-full flex flex-col justify-between text-white">
+              <div className="relative h-full flex flex-col justify-between gap-4 text-white">
                 <div>
                   <span className="text-white/80 font-semibold text-sm">01</span>
                   <h3 className="text-4xl md:text-5xl font-bold mt-2 mb-4">
@@ -56,7 +56,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                   <p className="text-white/90 text-lg max-w-lg mb-6">
                     {projectsData[0].description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-10"> 
                     {projectsData[0].technologies.map((tech) => (
                       <span
                         key={tech}
