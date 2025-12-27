@@ -39,6 +39,7 @@ export const skillsData: Skill[] = [
   { name: "Selenium", level: "intermediate", category: "Backend" },
   { name: "Supabase", level: "intermediate", category: "Backend" },
   { name: "Prisma", level: "intermediate", category: "Backend" },
+  { name: "FastAPI", level: "advanced", category: "Backend" },
   
   // Others
   { name: "Git", level: "advanced", category: "Others" },
